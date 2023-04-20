@@ -33,7 +33,16 @@
             </a>
         </header> 
         <main>
+            {% block principal %}
             <h1> Reserva já o banho do seu Pet! </h1>
+            <br>
+            <a href="{% url 'contato' %}" class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4"> Contato </span>
+            </a>
+            <a href="{% url 'reserva' %}" class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4"> Reserva de Banho </span>
+            </a>
+            {% endblock %}
         </main>
         <footer class="pt-5 my-5 text-muted border-top">
             Curso Python - Ultima School
