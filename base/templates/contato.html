@@ -10,11 +10,12 @@
 </p>
 {% if sucesso %}
 <p class="alert alert-success"> Mensagem enviada com sucesso! </p>
-{% endif %}
+{% else %}
 <form action="" method="post">
     {% csrf_token %}
     {% bootstrap_form form %}
     <hr>
     <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
 </form>
+{% endif %}
 {% endblock %}

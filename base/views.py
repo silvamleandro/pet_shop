@@ -12,6 +12,7 @@ def contato(request):
 
     if form.is_valid():
         contexto['sucesso'] = True
+        form.save()
 
     contexto['form'] = form
     contexto['telefone'] = '(99) 99999-9999'
@@ -27,8 +28,7 @@ def reserva(request):
 
     if form.is_valid():
         contexto['sucesso'] = True
-    else:
-        form = ReservaForm()
+        form.save()
     
     contexto['form'] = form
 
